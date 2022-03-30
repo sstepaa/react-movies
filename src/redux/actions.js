@@ -1,0 +1,1 @@
+export const UP_COMING_MOVIES = "UP_COMING_MOVIES";
