@@ -1,20 +1,14 @@
 /** @format */
 
-import { useEffect } from "react";
-import { connect, useDispatch } from "react-redux";
-import { getAllUpComingMovies } from "./redux/actionCreators";
+import Home from "./Components/Pages/Home";
 
-function App({comingMovies}) {
-	const myDisp = useDispatch();
-  console.log(comingMovies);
-	useEffect(() => {
-		myDisp(getAllUpComingMovies());
-	}, [myDisp]);
-	return <div className="App"></div>;
-}
+const App = () => {
+	
+	return (<div className="App">
+		<Home/>
+	</div>);
+};
 
-const mapStateToProps = (state) => ({
-	comingMovies: state.getAllUpComingMovies,
-});
 
-export default connect(mapStateToProps, {})(App);
+
+export default App;

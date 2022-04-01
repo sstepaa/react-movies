@@ -10,10 +10,9 @@ export const getAllUpComingMovies = () => (dispatch) => {
 	axios
 		.get(`${API_URL_COMING_MOVIES}`)
 		.then((r) => {
-            console.log(r);
 			return dispatch({
 				type: UP_COMING_MOVIES,
-				moviesComing: r,
+				comingMovies: r.data,
 			});
 		})
 		.catch((e) => {

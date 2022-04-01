@@ -8,7 +8,7 @@ const getUpComingMovies = (state = {}, action) => {
         case UP_COMING_MOVIES:
             return {
                 ...state,
-                upComingMovies: action.comingMovies,
+                comingMovies: action.comingMovies,
             }
 
             default:
